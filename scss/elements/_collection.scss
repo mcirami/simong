@@ -1,0 +1,66 @@
+.collection {
+	clear: both;
+	
+	.products {
+		@include clearfix;
+		
+		.product_desc {
+			width: 40%;
+			float: left;
+			padding: 0 2em;
+			
+			@include media($break960){
+				width: 50%;
+			}
+			
+			@include media($break720){
+				width: 100%;
+			}
+			
+			h2 {
+				@include gotham;
+				font-size: 2.1875em;
+				text-align: center;
+				padding-top: 1em;
+				margin-bottom: .6em;
+				text-transform: uppercase;
+				line-height: 1;
+				color: $darkBlue;
+			}
+			
+			p {
+				@include didotItalic;
+				font-size: 1.25em;
+				text-align: center;
+				color: $darkBlue;
+			}
+		}
+		
+		.product {
+			
+			@include media($break960){
+				width: 25%;
+				padding: .3125em .3125em 1em;
+			}
+			
+			@include media($break720){
+				width: 50%;
+			}
+		}
+	}
+}
+
+.product_grid {
+	@include clearfix;
+	clear: both;
+	padding: 0 1em;
+	margin: 0 auto;
+	
+	@include media($break960){
+		width: 91.66667%;
+	}
+	
+	@include media($break720){
+		width: 100%;
+	}
+}

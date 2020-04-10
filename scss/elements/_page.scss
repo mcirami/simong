@@ -1,0 +1,60 @@
+.default_page {
+
+	.content {
+		@include span-columns(12);
+		padding: 40px 100px;
+
+		@include media($break815) {
+			padding: 20px;
+		}
+	}
+
+	h1 {
+		@include gotham;
+		font-size: 24px;
+	}
+	
+	h2 {
+		font-weight: 400;
+		font-size: 1.5em;
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+
+	h3 {
+		@include gotham;
+		font-weight: 300;
+		font-size: 1em;
+		margin-top: 0;
+		margin-bottom: .3em;
+	}
+	
+	h4 {
+		@include didot;
+		font-size: 1.5em;
+		margin-top: 0;
+		margin-bottom: .35em;
+	}
+
+	p {
+		@include didot;
+		line-height: 1.375em;
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+	
+	a {
+		color: #326697;
+		font-weight: bold;
+	}
+	
+	ul {
+		margin-bottom: 1em;
+		line-height: 1.5em;
+		list-style: none;
+		
+		li {
+			@include didot;
+		}
+	}
+}

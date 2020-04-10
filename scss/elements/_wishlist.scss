@@ -1,0 +1,220 @@
+.wish_list {
+	article {
+		@include clearfix;
+		
+		&.wish-list {
+			clear: both;
+		}
+	}
+}
+
+.wish-list-product {
+	@include span-columns(4);
+	padding: 0 3em;
+	margin-bottom: 10px;
+	
+	&:nth-child(3n) {
+		margin-right: 0px;
+	}
+	
+	@include media($break720){
+		@include span-columns(4);
+		
+		&:nth-child(2n) {
+			margin-right: 0px;
+		}
+		
+		&:nth-child(3n) {
+			//margin-right: 3.57866%;
+		}
+	}
+	
+	@include media($mobile){
+		@include span-columns(4);
+		margin-right: 0px !important;
+	}
+
+	.wist_list_border {
+		border-top: 1px solid #c5cbd1;
+	}
+
+	span.collection {
+		@include didotItalic;
+		color: $silver;
+		text-transform: uppercase;
+		text-align: left !important;
+		font-size: .875em;
+	}
+
+	p {
+		@include gotham;
+		color: $darkBlue;
+		font-size: 1.2em;
+		text-transform: uppercase;
+		margin-bottom: 0;
+		text-align: left;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+  .button {
+    @include gotham;
+    text-transform: uppercase;
+    display: inline-block;
+    background: $buttngray;
+    color: $darkBlue;
+    border: 1px solid $darkBlue;
+    margin: .75em 0 2em;
+    padding: .7em;
+    font-size: .875em;
+
+    &:hover {
+      background: darken($buttngray, 5%);
+    }
+  }
+
+  .info_container {
+    text-align: center;
+    padding-bottom: 25px;
+
+    a {
+      @include gotham;
+      text-transform: uppercase;
+      color: $darkBlue;
+      font-size: .875em;
+      margin-bottom: .5em;
+      padding: 0 16px 0 20px;
+
+      &:hover {
+        color: $gray;
+        transition: none;
+      }
+    }
+
+    .hint {
+      &:before {
+        content: "";
+        position: absolute;
+        top: .2em;
+        left: 0;
+        background-position: -2px -181px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        display: block;
+        width: 14px;
+        height: 10px;
+        background-image: url('../images/sprite.png');
+      }
+    }
+
+    }
+
+    .fa-envelope-o {
+      color: $darkBlue;
+    }
+  }
+
+
+.wish_list_counter {
+  @include span-columns(6);
+  padding-bottom: .5em;
+  
+  @include media($break720){
+  	@include span-columns(8);
+  }
+
+  p {
+  	@include gotham;
+  	color: $darkBlue;
+    padding-left: 40px;
+    padding-bottom: .5em;
+	font-weight: 400;
+	font-size: .875em;
+
+    span {
+      @include didotItalic;
+      color: #959193;
+    }
+  }
+}
+
+.email_print {
+  @include span-columns(6);
+  margin-right: 0px;
+  display: block;
+  float: right;
+  padding-right: 65px;
+  
+  @include media($break720){
+  	@include span-columns(8);
+  	float: none;
+  	text-align: center;
+  }
+
+  .print {
+    @include gotham;
+    text-transform: uppercase;
+    display: inline-block;
+    background: $buttngray;
+    color: $darkBlue;
+    border: 1px solid $darkBlue;
+    margin: 1em 1em 2em;
+    padding: .5em 1em .5em 1.95em;
+    font-size: .875em;
+    float: right;
+    
+    @include media($break720){
+    	float: none;
+    }
+
+    &:hover {
+      background: darken($buttngray, 5%);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: .75em;
+      margin-top: -7px;
+      background-position: -2px -254px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      display: block;
+      width: 10px;
+      height: 12px;
+      background-image: url('../images/sprite.png');
+    }
+    
+    
+    .printfriendly { 
+	    display: block;
+	    
+	    img {
+		    display: none;
+	    }
+	}
+
+  }
+
+  .email {
+    @extend .print;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: .7em;
+      margin-top: -5px;
+      background-position: -2px -181px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      display: block;
+      width: 14px;
+      height: 10px;
+    }
+  }
+}

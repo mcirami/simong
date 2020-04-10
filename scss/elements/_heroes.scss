@@ -1,0 +1,162 @@
+.hero {
+	@include span-columns(12);
+	overflow-x: hidden;
+	
+	@include media($tablet){
+		margin-top: 73px;
+	}
+	
+	img {
+		display: block;
+		max-width: 100%;
+	}
+	
+	.image_fallback {
+		background-color: #86939f;
+		padding: 8.75em 0 1.5em;
+		//margin: 0 -100%;
+		//min-height: 265px;
+
+		@include media($tablet) {
+			padding-top: 5.75em;
+		}
+	}
+	
+	.hero_content {
+		@include gotham;
+		position: absolute;
+		width: 100%;
+		bottom: 20%;
+		left: 0;
+		
+		h1 {
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+		
+		&.left {
+			text-align: left;
+			padding: 0 1em;
+		}
+		
+		&.left_indent {
+			text-align: left;
+			padding: 0 8.333%;
+			
+			&.no_image {
+				padding-left: 8.333%;
+
+				@include media($break815) {
+					padding-left: 25px;
+				}
+
+				h1 {
+
+					@include media($break650) {
+						font-size: 1.5em;
+					}
+				}
+			}
+		}
+		
+		&.center {
+			text-align: center;
+		}
+		
+		&.white_font {
+			
+			h1 {
+				color: $white;
+				text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+
+				@include media($break960) {
+					font-size: 1.75em;
+				}
+
+				@include media($break650) {
+					font-size: 1.375em;
+				}
+			}
+			
+			p {
+				color: $white;
+
+				@include media($break960) {
+					font-size: 1.25em;
+				}
+
+				@include media($break650) {
+					font-size: 15px;
+				}
+			}
+		}
+		
+		&.black_font {
+			
+			h1 {
+				color: $black;
+				text-shadow: 1px 1px 1px rgba(255,255,255,.3);
+
+				@include media($break960) {
+					font-size: 1.75em;
+				}
+
+				@include media($break650) {
+					font-size: 1.375em;
+				}
+			}
+			
+			p {
+				color: $black;
+
+				@include media($break960) {
+					font-size: 1.25em;
+				}
+
+				@include media($break650) {
+					font-size: 15px;
+				}
+			}
+		}
+		
+		h1 {
+			font-size: 2.1875em;
+			line-height: 1;
+			text-transform: uppercase;
+			text-shadow: 1px 1px 1px rgba(31,31,31,.3);
+			margin: 0;
+			
+			@include media($break1005){
+				font-size: 1.75em;
+			}
+			
+			@include media($mobile){
+				font-size: 1.375em;
+			}
+		}
+		
+		p {
+			font-size: 1.6em;
+			line-height: 1;
+			@include didotItalic;
+			margin: 0;
+		}
+		
+		&.no_image {
+			position: relative;
+			padding-left: 100px;
+			
+			&.center {
+				padding-left: 0;
+			}
+			
+			@include media($mobile) {
+				padding-left: 20px;
+			}
+			
+			h1 {
+				font-size: 1.75em;
+			}
+		}
+	}
+}

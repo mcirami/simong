@@ -1,0 +1,76 @@
+// general wrapper class
+.container {
+	@extend %post;
+	// Set max-width here
+
+	.content {
+		@include span-columns(8);
+		
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	}
+	.sidebar {
+		@include span-columns(4);
+		@include omega;
+		padding: 2rem 0;
+		
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	}
+}
+
+footer, .footer_form {
+	.container {
+		@include media($desktop) {
+			padding: 0 20px;
+		}
+	}
+}
+
+// WP Image Alignment Classes
+.alignleft {
+	float: left;
+	margin-right: 10px;
+}
+
+.alignright {
+	float: right;
+	margin-left: 10px;
+}
+
+.aligncenter {
+	margin: 10px auto;
+}
+
+.content_wysiwyg {
+	p {
+		margin: 0 0 1em 0;
+	}
+	ul {
+		//default UL styling for within a WYSIWYG editor
+		margin: 1em 0 1em 1.25em;
+		padding-left: 1.25em;
+		
+		ul {
+			margin: 0;
+		}
+	}
+	
+	ol {
+		//default UL styling for within a WYSIWYG editor
+		margin: 1em 0 1em 1.25em;
+		padding-left: 1.25em;
+		
+		ol {
+			margin: 0;
+		}
+	}
+	
+	blockquote {
+		padding-left: 1em;
+		margin-left: 1.25em;
+		border-left: 2px solid $black;
+	}
+}

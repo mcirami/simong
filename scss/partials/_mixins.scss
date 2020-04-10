@@ -1,0 +1,84 @@
+// mixins
+
+@mixin clearRow($nth) {
+	&:nth-child(#{$nth}+1) {
+		clear: both;
+	}
+}
+
+// Omega Reset
+@mixin omega-reset($nth, $columns) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($columns); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// Vertical Align
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin horizontal-align {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+@mixin gudea {
+	font-family: 'Gudea', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin gudeaBold {
+	font-family: 'Gudea', sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin gudeaItalic {
+	font-family: 'Gudea', sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin montserrat {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin montserratBold {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin didot {
+	font-family: 'Didot 06 A', 'Didot 06 B', Georgia, serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin didotItalic {
+	font-family: 'Didot 06 A', 'Didot 06 B', Georgia, serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin gotham {
+	font-family: 'Gotham A', 'Gotham B'; 
+	font-weight: 400; 
+	font-style: normal;
+}
+
+@mixin gothamBold {
+	font-family: 'Gotham A', 'Gotham B'; 
+	font-weight: 700; 
+	font-style: normal;
+}

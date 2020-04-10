@@ -1,0 +1,184 @@
+#home_html {
+	height: 100%;
+}
+
+.home {
+	height: 100%;
+}
+
+.homepage {
+	height: 96%;
+	
+	.swiper-container {
+		height: 100%;
+	}
+	
+	.swiper-wrapper {
+		height: 100%;
+	}
+	
+	.swiper-slide {
+		min-height: 100%;
+		height: 100%;
+		background-size: cover;
+		
+		.details {
+			position: absolute;
+			max-width: 35em;
+			
+			&.darkblue {
+				color: $darkBlue;
+				text-shadow: 1px 1px 1px rgba(255,255,255,.75);
+			}
+			
+			&.white {
+				color: $white;
+				
+				a {
+					color: $white !important;
+					border: 1px solid $white;
+				}
+			}
+			
+			&.top {
+				top: 41%;
+				
+				@include media($mobile){
+					top: 21%;
+				}
+			}
+			
+			&.left {
+				left: 11%;
+				margin-right: 19%;
+				
+				@include media($mobile){
+					left: 17%;
+				}
+			}
+			
+			&.right {
+				right: 11%;
+				margin-left: 19%;
+
+				@include media($mobile){
+					right: 17%;
+				}
+			} 
+
+			&.bottom {
+				bottom: 20%;
+				
+				@include media($mobile){
+					bottom: 10%;
+				}
+			}
+			
+			&.center {
+				width: 100%;
+				max-width: 840px;
+				position: relative;
+				margin: 0 auto;
+				text-align: center;
+				
+				@include media($mobile){
+					max-width: 260px;
+					
+					p {
+						line-height: 1;
+						margin-bottom: 1em;
+					}
+				}
+			}
+			
+			h2 {
+				@include gotham;
+				font-weight: 300;
+				font-size: 2.1em;
+				margin-bottom: .4em;
+				line-height: 1;
+				
+				@include media($mobile){
+					font-size: 1.5em;
+				}
+			}
+			
+			p {
+				@include didotItalic;
+				font-size: 1.25em;
+				margin-bottom: 1.5em;
+				line-height: 1.5em;
+				
+				@include media($mobile){
+					font-size: 1em;
+				}
+			}
+			
+			a {	
+				font-size: 1.5em !important;
+				text-transform: uppercase;
+				padding: .5em .75em;
+				color: #324251;
+				background-color: rgba(50,66,81,.1);
+				border: 1px solid #324251;
+				text-align: center;
+				display: inline-block;
+				
+				@include media($mobile){
+					font-size: 1em !important;
+					padding: .2em .25em;
+				}
+			}
+		}
+	}
+	
+	.swiper-button-prev {
+		height: 54px !important;
+		width: 54px !important;
+		background-size: 54px 54px !important;
+		background-image: url('../images/slide_arrow_left.png');
+		
+		@include media($mobile){
+			height: 25px !important;
+			width: 25px !important;
+			background-size: contain !important;
+		}
+	}
+	
+	.swiper-button-next {
+		height: 54px !important;
+		width: 54px !important;
+		background-size: 54px 54px !important;
+		background-image: url('../images/slide_arrow_right.png');
+		
+		@include media($mobile){
+			height: 25px !important;
+			width: 25px !important;
+			background-size: contain !important;
+		}
+	}
+	
+	.swiper-pagination-bullet-active {
+		opacity: 1 !important;
+		background-image: url('../images/pagination_active.png') !important;
+		
+		@include media($mobile){
+			width: 20px !important;
+			height: 20px !important;
+			background-size: contain !important;
+		}
+	}
+	
+	.swiper-pagination-bullet {
+		width: 30px !important;
+		height: 30px !important;
+		background: url('../images/pagination_inactive.png') no-repeat;
+		opacity: 1 !important;
+		
+		@include media($mobile){
+			width: 20px !important;
+			height: 20px !important;
+			background-size: contain !important;
+		}
+	}
+}

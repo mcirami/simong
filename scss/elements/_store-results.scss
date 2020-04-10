@@ -1,0 +1,346 @@
+#sl_div {
+	
+	&.sl_search_wrapper {
+		@include clearfix;
+		background-color: $gray;
+		padding: 140px 0 40px;
+	}
+	
+	#addy_in_address {
+	
+		label {
+			@include span-columns(12);
+			color: $white;
+			text-align: left;
+		}
+		
+		input[type="text"] {
+			width: 76%;
+			background: transparent;
+			border: 1px solid $lighterGray;
+			color: $white;
+			padding: .5em .75em;
+		}
+	}
+	
+	.search_item {
+		position: absolute;
+		width: 100%;
+		
+		#addy_in_radius {
+			display: none;
+		}
+		
+		#radius_in_submit {
+			position: absolute;
+			left: 77%;
+			top: 27px;
+			margin-bottom: 0;
+		
+			input[type="submit"] {
+				@include gotham;
+				height: 37px;
+				padding: .25em .5em;
+				color: $lighterGray;
+				text-transform: uppercase;
+				background: transparent;
+				border: 1px solid $lighterGray;
+				position: relative;
+				display: none;
+			}
+		}
+	}
+		
+	#map_sidebar {
+		span.location_name {
+			@include gotham;
+			color: $darkBlue;
+		}
+	}
+}
+
+.where_to_buy {
+	@include span-columns(12);
+}
+
+.banner-locator {
+	@include clearfix;
+	background-color: $gray;
+	padding: 140px 0 40px;
+	
+	form {
+		
+		label {
+			@include span-columns(12);
+			color: $white;
+			text-align: left;
+		}
+		
+		input[type="text"] {
+			width: 76%;
+			background: transparent;
+			border: 1px solid $lighterGray;
+			color: $white;
+			padding: .5em .75em;
+		}
+	}
+}
+
+#contact-retailer {
+	
+	.retailers {
+		width: 100%;
+		float: left;
+		margin-left: 0;
+		margin-right: 0;
+		background: #edeff1;
+		margin-bottom: 4em;
+		
+		.retailer {
+			width: 25%;
+			float: left;
+			background: 0 0;
+			font-size: .9em;
+			border-right :1px solid #e2e2e2;
+			min-height: 200px;
+			
+			&:last-child {
+				border: none;
+			}
+			
+			@include media($tablet){
+				width: 50%;
+				min-height: 0px;
+			}
+			
+			@include media($mobile){
+				width: 100%;
+				border: none;
+				min-height: 0px;
+			}
+			
+			label {
+				@include span-columns(12);
+				
+				span {
+					line-height: normal;
+					width: 100%;
+					text-transform: uppercase;
+					font-size: .73em;
+					display: block;
+					
+					&.partner {
+						position: absolute;
+						top: -1em;
+						
+						&.diamond {
+							color: #A47C39;
+						}
+						
+						&.sapphire {
+							color: #193E9B;
+						}
+						
+						&.emerald {
+							color: #008941;
+						}
+						
+						&.authorized {
+							color: #7D786F;
+						}
+					}
+				}
+			}
+			
+			&:first-child {
+				border-left: none;
+			} 
+			
+			&.selected {
+				background: #d0d5db;
+			}
+			
+			.details {
+				padding: 2em 2em 2em 1em;
+				line-height: 1.5em;
+				
+				[type=radio] {
+					float: left;
+					width: 15px;
+				}
+				
+				.contact_retailer_info {
+					float: left;
+					margin-left: 10px;
+					width: 85%;
+					
+					label {
+						
+						span {
+							position: relative;
+							top: 0;
+						}
+					}
+				}
+				
+				ul {
+					margin-bottom:0;
+					
+					li {
+						display: inline-block;
+						padding: 0.5em;
+						font-size: .8em;
+						
+						&:first-child {
+							padding-left: 0;
+							border-right: 1px solid #e2e2e2;
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+.locations {
+	width: 100%;
+	
+	.container {
+		clear: both;
+	}
+}
+
+.sl_page_title, .store_page_title {
+	@include span-columns(6);
+	color: $white;
+	padding-left: 8.333%;
+	
+	@include media($mobile){
+		@include span-columns(4);
+	}
+	
+	h1 {
+		@include gotham;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	
+	p {
+		@include didot;
+		font-style: italic;
+		font-weight: bold;
+		font-size: 20px;
+		margin-top: 0;
+	}
+}
+
+.sl_page_search, .store_page_search {
+	@include span-columns(6);
+	@include gotham;
+	margin-top: 12px;
+	max-width: 440px;
+	float: right;
+	
+	@include media($mobile){
+		@include span-columns(4);
+		padding-left: 8.3333%;
+	}
+	
+	form {
+		@include clearfix;
+	}
+	
+}
+
+#store-info {
+	width: 25%;
+	float: left;
+	
+	@include media($tablet){
+		width: 100%;
+	}
+	
+	.store {
+		padding: 15px;
+		
+		&[data-partner="A"] {
+			border-right: 7px solid #A47C39;
+			background: #f2f2f2;
+			
+			hgroup p {
+				display: block;
+				color: #A47C39;
+			}
+		}
+		
+		&[data-partner="B"] {
+			border-right: 7px solid #193E9B;
+			background: #f2f2f2;
+			
+			hgroup p {
+				display: block;
+				color: #193E9B;
+			}
+		}
+		
+		&[data-partner="C"] {
+			border-right: 7px solid #008941;
+			background: #f2f2f2;
+			
+			hgroup p {
+				display: block;
+				color: #008941;
+			}
+		}
+		
+		&[data-partner="D"] {
+			border-right: 7px solid #7D786F;
+			background: #f2f2f2;
+			
+			hgroup p {
+				display: block;
+				color: #7D786F;
+			}
+		}
+	}
+	
+	hgroup {
+		
+		p {
+			margin: 0;
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+	
+		h2 {
+			@include gotham;
+			font-size: 14px;
+			color: $darkBlue;
+		}
+	}
+	
+	[itemprop="address"] {
+		font-size: 12px;
+		line-height: 1.5;
+		margin: 0 0 10px 0;
+	}
+	
+	[itemprop="tel"] {
+		font-size: 12px;
+		padding-top: 0;
+	}
+	
+	.location {
+		font-size: 11px;
+		
+		span {
+			display: inline-block;
+			width: auto;
+			font-size: 11px;
+		}
+	}
+	
+	.website {
+		font-size: 11px;
+	}
+}

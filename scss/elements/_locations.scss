@@ -1,0 +1,45 @@
+.wtb_go {
+	font-family: 'Gotham A', 'Gotham B';
+	font-weight: 400;
+	font-style: normal;
+	height: 37px;
+	padding: .25em .5em;
+	color: #e6e5e5;
+	text-transform: uppercase;
+	background: transparent;
+	border: 1px solid #e6e5e5;
+	position: relative;
+}
+
+.wtb_search {
+	
+	&::-webkit-input-placeholder {
+	   color: $white;
+	}
+	
+	&:-moz-placeholder { /* Firefox 18- */
+	   color: $white;  
+	}
+	
+	&::-moz-placeholder {  /* Firefox 19+ */
+	   color: $white;  
+	}
+	
+	&:-ms-input-placeholder {  
+	   color: $white;  
+	}
+}
+
+.store_result_wrap {
+	border-bottom: 1px solid #e2e2e2;
+}
+
+#map {
+	min-height: 1175px;
+	width: 75%;
+	float: left;
+	
+	@include media($tablet){
+		width: 100%;
+	}
+}

@@ -1,0 +1,9 @@
+// typography baselines and @font face setups
+
+h1, h2, h3, h4, h5 {
+	$font-family: $helvetica;
+}
+
+a, h5 {
+	@include gotham;
+}

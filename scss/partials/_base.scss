@@ -1,0 +1,162 @@
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-x: hidden;
+	font-size: 62.5%;
+	//-webkit-font-smoothing: antialiased;
+	//-moz-osx-font-smoothing: grayscale;
+	background-color: #fcfbfb;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	color: $charcoal;
+	background: $lightGray;
+}
+
+p {
+	margin: 1em 0;
+}
+
+a {
+	text-decoration: none;
+	@include transition(color 1s ease-in);
+	color: $gray;
+	
+	&:focus {
+		outline: 0;
+	}
+
+	&:hover {
+		color: $gray;
+	}
+}
+
+::selection {
+	background: lighten($gray, 5%);
+	opacity: 0.8;
+	color: $white;
+	text-shadow: 0 0 1px $charcoal;
+}
+
+::moz-selection {
+	background: lighten($gray, 5%);
+	opacity: 0.8;
+	color: $white;
+	text-shadow: 0 0 1px $charcoal;
+}
+
+.oldies {
+	background: lighten($charcoal, 20%);
+	color: $white;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+// Begin responsive video Wrapper
+.video_container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video_container iframe,  
+.video_container object,  
+.video_container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+// End responsive video wrapper
+
+.add_to_wish_list_button {
+	@include didotItalic;
+	display: block;
+	text-align: right;
+	padding: 5px 25px 5px 0;
+	color: $gray;
+	font-size: 16px;
+	line-height: 1;
+	
+	&.dark_background {
+		color: $darkBlue;
+		
+		&:after {
+			background-position: -2px -428px;
+		}
+	}
+	
+	span {
+		@include didotItalic;
+		@include transition(opacity 0.4s ease-in);
+		opacity: 0;
+	}
+	
+	&:hover {
+		color: $gray;
+		span {
+			opacity: 1;
+		}
+	}
+
+	&:after {
+		content: "";
+		background-image: url('../images/sprite.png');
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: -8px;
+		background-position: -2px -374px;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		display: block;
+		width: 15px;
+		height: 14px;
+	}
+
+	&.selected:after {
+			background-position: -2px -392px;
+	}
+}
+
+.has-wishlist-items {
+	&:after {
+		content: "";
+		background-image: url('../images/sprite.png');
+		position: absolute;
+		top: 50%;
+		right: -20px;
+		margin-top: 4px;
+		background-position: -2px -392px;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		display: block;
+		width: 15px;
+		height: 14px;
+	}
+}
+
+.noscroll {
+	overflow: hidden;
+	
+	#wpadminbar {
+		display: none;
+	}
+}
+
+#wpadminbar {
+	position: fixed;
+}
+
+.printfriendly {
+	display: none;
+}

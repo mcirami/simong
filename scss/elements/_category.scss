@@ -1,0 +1,51 @@
+.category {
+
+	.content {
+		@include span-columns(12);
+		
+		.search_results_count {
+			margin-left: 40px;
+		
+			h5 {
+				color: $silver;
+				font-size: 1.125em;
+				margin-bottom: .75em;
+				margin-left: 20px;
+				
+				span {
+					font-size: 20px;
+					@include didot;
+					color: $darkBlue;
+					font-style: italic;
+				}
+			}
+		}
+		
+		.row {
+			
+			.product_grid {
+				
+				@include media($break960){
+					width: 100%;
+				}
+				
+				.product {
+					
+					&:nth-child(5) {
+						
+						@include media($tablet){
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.description {
+		@include didotItalic;
+		text-align: center;
+		font-size: 20px;
+		padding: 20px 15% 20px;
+	}
+}
